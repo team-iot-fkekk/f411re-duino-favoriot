@@ -32,7 +32,7 @@ void setup()
     // initialize serial for debugging
     Serial.begin(115200);
     // initialize serial for ESP module
-    SerialESP.begin(115200);
+    SerialESP.begin(9600);
     // initialize ESP module
     WiFi.init(&SerialESP);
 
@@ -61,7 +61,7 @@ void loop()
 {
     counter = counter + 1;
     dataStream(counter);
-    delay(1000);
+    delay(5000);
 }
 
 void dataStream(int i)
