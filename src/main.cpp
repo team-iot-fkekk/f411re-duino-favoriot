@@ -22,7 +22,7 @@ WiFiEspServer server(80);
 WiFiEspClient client;
 
 const String myDevice = "f411re@team-iot-fkekk";
-String apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlYW0taW90LWZrZWtrIiwicmVhZF93cml0ZSI6dHJ1ZSwiaWF0IjoxNTk2MDExOTA3fQ.A8_CEiEaIS8B7-uZiMc2QB-O1OhC-gPmD1-tzkccjRk"; // **replace with your api key from the FAVORIOT platform account setting
+String apikey = ""; // **replace with your api key from the FAVORIOT platform account setting
 char serverAdd[] = "apiv2.favoriot.com";
 
 void dataStream(int i);
@@ -67,7 +67,7 @@ void loop()
 void dataStream(int i)
 {
     // Json Data to send to Platform
-    String json = "{\"device_developer_id\":\""+myDevice+"\",\"data\":{\"Counter\":\"" + String(i) + "\"}}";
+    String json = "{\"device_developer_id\":\"" + myDevice + "\",\"data\":{\"Counter\":\"" + String(i) + "\"}}";
 
     // String json = "{\"device_developer_id\":\"+myDevice+\",
     // \"data\":{   \"Sensor_1\":\""+sensor1+"\",
